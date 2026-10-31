@@ -85,6 +85,14 @@ a {
     gap: 10px;
 }
 
+.brand img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
 .brand-mark {
     width: 35px;
     height: 35px;
