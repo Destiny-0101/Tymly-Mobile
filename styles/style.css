@@ -93,28 +93,6 @@ a {
     flex-shrink: 0;
 }
 
-.brand-mark {
-    width: 35px;
-    height: 35px;
-    display: grid;
-    place-items: center;
-    border-radius: 10px;
-    background: var(--red);
-    color: var(--white);
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.brand-name {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-.brand-period {
-    color: var(--red);
-}
-
 .topbar-right {
     display: flex;
     align-items: center;
