@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0B1428">
+    <meta name="description" content="Tymly helps speakers prepare for engagements and manage their time.">
+
+    <title>Tymly — Your Helpful Chronoguide</title>
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="assets/tymly-icon.png" type="image/png">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <a href="#" class="brand">
+            <span class="brand-mark">T</span>
+            <span class="brand-name">tymly<span class="brand-period">.</span></span>
+        </a>
+
+        <div class="topbar-right">
+            <span class="today-label" id="header-date"></span>
+            <button class="profile-button" aria-label="Profile">S</button>
+        </div>
+    </header>
+
+    <main class="dashboard">
+
+        <section class="welcome-section">
+            <div>
+                <p class="eyebrow">YOUR PERSONAL CHRONOGUIDE</p>
+                <h1 id="greeting">Good day, Speaker.</h1>
+                <p class="welcome-subtitle">
+                    Make every moment of your next engagement count.
+                </p>
+            </div>
+            <div class="welcome-decoration" aria-hidden="true">
+                <span class="decoration-ring ring-one"></span>
+                <span class="decoration-ring ring-two"></span>
+                <span class="decoration-dot"></span>
+            </div>
+        </section>
+
+        <section class="next-section">
+            <div class="section-title">
+                <div>
+                    <p class="eyebrow">UP NEXT</p>
+                    <h2>Your next engagement</h2>
+                </div>
+                <span class="live-indicator">
+                    <span></span> YOUR SCHEDULE
+                </span>
+            </div>
+
+            <div class="engagement-card">
+                <div class="engagement-card-content">
+                    <div class="empty-icon">
+                        <span>◷</span>
+                    </div>
+
+                    <p class="empty-label">NOTHING ON THE CALENDAR</p>
+                    <h3>Your next speaking moment starts here.</h3>
+                    <p class="empty-description">
+                        Add an engagement to organise your event details,
+                        prepare your session and manage your speaking time.
+                    </p>
+
+                    <a href="add-engagement.html" class="primary-button">
+    <span>+</span> Add an engagement
+</a>
+                </div>
+
+                <div class="card-decoration" aria-hidden="true">
+                    <div class="card-circle circle-one"></div>
+                    <div class="card-circle circle-two"></div>
+                    <div class="card-grid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-section">
+            <div class="section-title">
+                <div>
+                    <p class="eyebrow">YOUR WORKSPACE</p>
+                    <h2>Quick access</h2>
+                </div>
+            </div>
+
+            <div class="quick-grid">
+                <button class="quick-card timer-card" data-feature="timer">
+                    <span class="quick-icon">◷</span>
+                    <span class="quick-card-title">Speaker Timer</span>
+                    <span class="quick-card-description">
+                        Stay within your allotted time.
+                    </span>
+                    <span class="quick-arrow">↗</span>
+                </button>
+
+<a href="engagements.html" class="quick-card schedule-card">                    <span class="quick-icon">▤</span>
+                    <span class="quick-card-title">Engagements</span>
+                    <span class="quick-card-description">
+                        Organise your speaking schedule.
+                    </span>
+                    <span class="quick-arrow">↗</span>
+                </a>
+
+                <button class="quick-card preparation-card" data-feature="preparation">
+                    <span class="quick-icon">✓</span>
+                    <span class="quick-card-title">Preparation</span>
+                    <span class="quick-card-description">
+                        Get ready for every session.
+                    </span>
+                    <span class="quick-arrow">↗</span>
+                </button>
+
+                <button class="quick-card reminders-card" data-feature="reminders">
+                    <span class="quick-icon">♧</span>
+                    <span class="quick-card-title">Reminders</span>
+                    <span class="quick-card-description">
+                        Keep important details in view.
+                    </span>
+                    <span class="quick-arrow">↗</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="schedule-section">
+            <div class="section-title">
+                <div>
+                    <p class="eyebrow">STAY AHEAD</p>
+                    <h2>Your schedule</h2>
+                </div>
+                <a href="engagements.html" class="text-button">
+    View all <span>→</span>
+</a>
+            </div>
+
+            <div class="schedule-empty">
+                <div class="schedule-empty-icon">▤</div>
+                <div>
+                    <h3>Your schedule is waiting.</h3>
+                    <p>Engagements you add will appear here.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="dashboard-footer">
+            <span>TIME IS A RESOURCE.</span>
+            <span class="footer-accent">MAKE EVERY MOMENT COUNT.</span>
+            <p>Your helpful Chronoguide.</p>
+        </footer>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+        <a href="#" class="nav-item active">
+            <span class="nav-icon">⌂</span>
+            <span>Home</span>
+        </a>
+<a href="engagements.html" class="nav-item">            <span class="nav-icon">▤</span>
+            <span>Schedule</span>
+        </a>
+        <a href="#timer" class="nav-item" data-feature="timer">
+            <span class="nav-icon">◷</span>
+            <span>Timer</span>
+        </a>
+        <a href="#settings" class="nav-item" data-feature="settings">
+            <span class="nav-icon">⚙</span>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="scripts/database.js"></script>
+<script src="scripts/app.js"></script></body>
+</html>

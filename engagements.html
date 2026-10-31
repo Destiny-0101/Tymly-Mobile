@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0B1428">
+    <meta name="description" content="Manage your speaking engagements with Tymly.">
+
+    <title>Engagements — Tymly</title>
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="assets/tymly-icon.png" type="image/png">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">T</span>
+            <span class="brand-name">tymly<span class="brand-period">.</span></span>
+        </a>
+
+        <div class="topbar-right">
+            <a href="index.html" class="text-button">← Dashboard</a>
+        </div>
+    </header>
+
+    <main class="dashboard engagements-page">
+
+        <section class="welcome-section">
+            <div>
+                <p class="eyebrow">YOUR SPEAKING SCHEDULE</p>
+                <h1>Your engagements.</h1>
+                <p class="welcome-subtitle">
+                    Keep every speaking commitment organised.
+                </p>
+            </div>
+        </section>
+
+        <section class="engagement-stats">
+            <div class="stat-card">
+                <span class="stat-number" id="upcoming-count">0</span>
+                <span class="stat-label">Upcoming</span>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-number" id="completed-count">0</span>
+                <span class="stat-label">Completed</span>
+            </div>
+        </section>
+
+        <section class="next-section">
+            <div class="section-title">
+                <div>
+                    <p class="eyebrow">YOUR COMMITMENTS</p>
+                    <h2>All engagements</h2>
+                </div>
+
+                <a href="add-engagement.html" class="primary-button">
+    + Add engagement
+</a>
+            </div>
+
+            <div class="engagement-list" id="engagement-list">
+
+                <div class="schedule-empty" id="empty-state">
+                    <div class="schedule-empty-icon">▤</div>
+                    <div>
+                        <h3>No engagements yet.</h3>
+                        <p>Your speaking commitments will appear here.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">⌂</span>
+            <span>Home</span>
+        </a>
+
+        <a href="engagements.html" class="nav-item active">
+            <span class="nav-icon">▤</span>
+            <span>Schedule</span>
+        </a>
+
+        <a href="#timer" class="nav-item">
+            <span class="nav-icon">◷</span>
+            <span>Timer</span>
+        </a>
+
+        <a href="#settings" class="nav-item">
+            <span class="nav-icon">⚙</span>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="scripts/database.js"></script>
+    <script src="scripts/engagements.js"></script>
+
+</body>
+</html>

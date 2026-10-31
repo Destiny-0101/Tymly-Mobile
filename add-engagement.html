@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0B1428">
+    <meta name="description" content="Add a speaking engagement to Tymly.">
+
+    <title>Add Engagement — Tymly</title>
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="assets/tymly-icon.png" type="image/png">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">T</span>
+            <span class="brand-name">tymly<span class="brand-period">.</span></span>
+        </a>
+
+        <div class="topbar-right">
+            <a href="engagements.html" class="text-button">← Back</a>
+        </div>
+    </header>
+
+    <main class="dashboard form-page">
+
+        <section class="welcome-section">
+            <div>
+                <p class="eyebrow">NEW COMMITMENT</p>
+                <h1>Add an engagement.</h1>
+                <p class="welcome-subtitle">
+                    Capture the details. We'll help you stay prepared.
+                </p>
+            </div>
+        </section>
+
+        <form id="engagement-form" class="engagement-form">
+
+            <div class="form-section-heading">
+                <h2>Basic information</h2>
+                <p>Tell us about your speaking commitment.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="eventName">Event name *</label>
+                <input
+                    type="text"
+                    id="eventName"
+                    name="eventName"
+                    placeholder="e.g. Annual Thanksgiving Service"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="organizer">Organizer *</label>
+                <input
+                    type="text"
+                    id="organizer"
+                    name="organizer"
+                    placeholder="Church, organisation or individual"
+                    required
+                >
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div class="form-section-heading">
+                <h2>When and where?</h2>
+                <p>Set the date, time and location.</p>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">Date *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="startTime">Start time *</label>
+                    <input type="time" id="startTime" name="startTime" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="venue">Venue</label>
+                <input
+                    type="text"
+                    id="venue"
+                    name="venue"
+                    placeholder="Enter venue or online meeting details"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="duration">Speaking duration</label>
+                <div class="input-with-suffix">
+                    <input
+                        type="number"
+                        id="duration"
+                        name="duration"
+                        min="1"
+                        max="1440"
+                        placeholder="e.g. 45"
+                    >
+                    <span>minutes</span>
+                </div>
+                <small>Leave blank if your speaking time hasn't been confirmed.</small>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div class="form-section-heading">
+                <h2>Session details</h2>
+                <p>Keep your preparation information together.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Speaking topic</label>
+                <input
+                    type="text"
+                    id="topic"
+                    name="topic"
+                    placeholder="What will you be speaking about?"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Additional notes</label>
+                <textarea
+                    id="notes"
+                    name="notes"
+                    rows="5"
+                    placeholder="Special instructions, contact details, things to remember..."
+                ></textarea>
+            </div>
+
+            <div class="form-actions">
+                <a href="engagements.html" class="secondary-button">
+                    Cancel
+                </a>
+
+                <button type="submit" class="primary-button">
+                    Save engagement →
+                </button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <script src="scripts/database.js"></script>
+    <script src="scripts/add-engagement.js"></script>
+
+</body>
+</html>
