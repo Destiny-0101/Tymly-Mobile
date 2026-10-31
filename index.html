@@ -22,7 +22,7 @@
 
         <div class="topbar-right">
             <span class="today-label" id="header-date"></span>
-            <button class="profile-button" aria-label="Profile">T</button>
+            <button class="profile-button" aria-label="Profile">D</button>
         </div>
     </header>
 
@@ -55,22 +55,46 @@
             </div>
 
             <div class="engagement-card">
-                <div class="engagement-card-content">
-                    <div class="empty-icon">
-                        <span>◷</span>
-                    </div>
+              <div class="engagement-card-content">
 
-                    <p class="empty-label">NOTHING ON THE CALENDAR</p>
-                    <h3>Your next speaking moment starts here.</h3>
-                    <p class="empty-description">
-                        Add an engagement to organise your event details,
-                        prepare your session and manage your speaking time.
-                    </p>
+                <!-- Shown when there are no upcoming engagements -->
+                <div id="next-empty-state">
+                  <div class="empty-icon">
+                    <span>◷</span>
+                  </div>
 
-                    <a href="add-engagement.html" class="primary-button">
-    <span>+</span> Add an engagement
-</a>
+                 <p class="empty-label">NOTHING ON THE CALENDAR</p>
+                 <h3>Your next speaking moment starts here.</h3>
+
+                 <p class="empty-description">
+                 Add an engagement to organise your event details,
+                 prepare your session and manage your speaking time.
+                 </p>
+
+                 <a href="add-engagement.html" class="primary-button">
+                 <span>+</span> Add an engagement
+                 </a>
                 </div>
+
+                <!-- Shown when an upcoming engagement exists -->
+                <div id="next-engagement-details" style="display: none;">
+
+                 <p class="empty-label">YOUR NEXT COMMITMENT</p>
+
+                 <h3 id="next-engagement-title"></h3>
+
+                 <p class="empty-description" id="next-engagement-date"></p>
+
+                 <p class="empty-description" id="next-engagement-venue"></p>
+
+                 <p class="empty-description" id="next-engagement-topic"></p>
+
+                 <a href="engagements.html" class="primary-button">
+                 View engagements <span>→</span>
+                 </a>
+
+                </div>
+            </div>
 
                 <div class="card-decoration" aria-hidden="true">
                     <div class="card-circle circle-one"></div>
@@ -143,6 +167,7 @@
                     <h3>Your schedule is waiting.</h3>
                     <p>Engagements you add will appear here.</p>
                 </div>
+                <div class="schedule-list" id="schedule-list"></div>
             </div>
         </section>
 

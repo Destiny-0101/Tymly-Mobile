@@ -500,6 +500,89 @@ a {
 }
 
 /* =========================================
+   DASHBOARD — UPCOMING SCHEDULE ITEMS
+========================================= */
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.schedule-item {
+    width: 100%;
+    min-height: 76px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--surface);
+    transition: background 0.2s;
+}
+
+.schedule-item:active {
+    background: var(--surface-hover);
+}
+
+.schedule-item-date {
+    width: 44px;
+    min-width: 44px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--surface-raised);
+}
+
+.schedule-day {
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.schedule-month {
+    color: var(--yellow);
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.schedule-item-details {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.schedule-item-details h3 {
+    overflow: hidden;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 750;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.schedule-item-details p {
+    overflow: hidden;
+    color: var(--muted);
+    font-size: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.schedule-item-time {
+    color: var(--yellow);
+    font-size: 10px;
+    font-weight: 650;
+}
+
+/* =========================================
    FOOTER
 ========================================= */
 
